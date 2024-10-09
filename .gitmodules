@@ -1,0 +1,4 @@
+[submodule "patrocars-web"]
+	path = patrocars-web
+	url = https://github.com/joguirod/patrocars-web
+	branch = main
