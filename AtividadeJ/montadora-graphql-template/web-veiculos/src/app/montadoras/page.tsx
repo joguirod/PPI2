@@ -7,8 +7,8 @@ export interface Montadora {
     id: number;
     modelos: string[];
     nome: string;
-    pais: string;
-    ano_fundacao: number;
+    paisOrigem: string;
+    anoFundacao: number;
 }
 
 export default async function Montadora() {
@@ -74,8 +74,8 @@ export default async function Montadora() {
                         {montadoras.map(montadora => (
                             <li key={montadora.id} className="border rounded-lg p-4 shadow-md">
                                 <h2 className="text-xl font-bold mb-2">{montadora.nome} <span className="text-gray-300">#{montadora.id}</span></h2>
-                                <p className="text-gray-200">País: {montadora.pais}</p>
-                                <p className="text-gray-200">Ano de Fundação: {montadora.ano_fundacao}</p>
+                                <p className="text-gray-200">País: {montadora.paisOrigem}</p>
+                                <p className="text-gray-200">Ano de Fundação: {montadora.anoFundacao}</p>
                                 {/* {(montadora.modelos.length > 0 
                                     && (
                                         <Link href={`/montadoras/${montadora.id}/modelos`} className="text-blue-500 hover:text-blue-700 mt-4 inline-block">
