@@ -1,0 +1,22 @@
+type Montadora {
+  id: ID!
+  nome: String
+  anoFundacao: Int
+  paisOrigem: String
+}
+
+input MontadoraInput {
+  nome: String!
+  anoFundacao: Int!
+  paisOrigem: String!
+}
+
+type Mutation {
+  createMontadora(input: MontadoraInput): Montadora
+  deleteMontadora(input: ID!): Boolean
+}
+
+type Query {
+  montadoras: [Montadora]
+  montadora(id: ID!): Montadora
+}
