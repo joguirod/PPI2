@@ -15,7 +15,7 @@ const AddMontadoraPage: React.FC = () => {
 
     const onSubmit = async (data: MontadoraFormData) => {
         try {
-            const response = await fetch('http://localhost:4040/graphql', {
+            const response = await fetch('http://localhost:4000/graphql', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -25,13 +25,13 @@ const AddMontadoraPage: React.FC = () => {
                         mutation {
                             createMontadora(input: {
                                 nome: "${data.nome}",
-                                pais: "${data.pais}",
-                                ano_fundacao: ${data.ano_fundacao}
+                                paisOrigem: "${data.pais}",
+                                anoFundacao: ${data.ano_fundacao}
                             }) {
                                 id
                                 nome
-                                pais
-                                ano_fundacao
+                                paisOrigem
+                                anoFundacao
                             }
                         }
                     `,
